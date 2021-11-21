@@ -31,7 +31,7 @@ function App() {
 							<RssView
 								title='On the Senate Floor Today.'
 								desc='Legislation brought to the floor of the United States Senate.'
-								link='https://www.congress.gov/rss/senate-floor-today.xml'
+								link='http://localhost:3000/public/senate'
 							/>
 						}
 					/>
@@ -41,7 +41,7 @@ function App() {
 							<RssView
 								title='On the House Floor Today.'
 								desc='Legislation brought to the floor of the United States House of Representatives.'
-								link='https://www.congress.gov/rss/house-floor-today.xml'
+								link='http://localhost:3000/public/house'
 							/>
 						}
 					/>
