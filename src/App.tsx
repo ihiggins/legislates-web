@@ -1,19 +1,18 @@
-import React from 'react';
 import Nav from './Components/Nav/Nav';
 import SideNav from './Components/Nav/SideNav';
 import RssView from './Components/List/RssView';
-
+import Layout from './Components/Layout';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
-
+import AllView from './Components/AllView';
 function App() {
 	return (
 		<div className='App'>
 			<Nav></Nav>
-			<div className='layout'>
+			<Layout>
 				<SideNav />
 
 				<Routes>
-					<Route path='/' element={<div> here?</div>} />
+					<Route path='/' element={<AllView />} />
 
 					<Route
 						path='/president'
@@ -68,7 +67,7 @@ function App() {
 
 					<Route path='*' element={<Navigate to='/' />} />
 				</Routes>
-			</div>
+			</Layout>
 		</div>
 	);
 }

@@ -1,13 +1,12 @@
-import parse from 'html-react-parser';
 import { useEffect, useState } from 'react';
 
 var Element = ({ title, content, link, bullets }: props) => {
 	const [shown, setShown] = useState(0);
 
 	useEffect(() => {
-		if (!bullets) return;
+		if (!bullets || bullets.length === 0) return;
 		setShown(randInt(1, bullets.length));
-	}, []);
+	}, [bullets]);
 
 	var items = [];
 
@@ -49,7 +48,7 @@ interface props {
 
 type bullet = {
 	pub: string;
-	time: string;
+	time?: string;
 	title: string;
 	url: string;
 };

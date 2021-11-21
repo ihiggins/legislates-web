@@ -46,8 +46,12 @@ $hover: #3e476e36;
 .nav {
 	height: 58px;
 	width: 100vw;
-	font-size: 34px;
+	font-size: 24px;
 	box-shadow: $elevation-high;
+	display: flex;
+	color: $text-primary;
+	z-index: 100;
+	line-height: 58px;
 }
 
 .element {
@@ -153,6 +157,7 @@ $hover: #3e476e36;
 	overflow-x: scroll !important;
 	row-gap: 16px;
 	width: 100%;
+	padding: 16px;
 	margin: 0 auto !important;
 }
 
@@ -216,4 +221,31 @@ a {
 a:hover {
 	text-decoration: underline;
 	text-decoration-color: $text-link;
+}
+
+.layout {
+	width: 100%;
+}
+.lopen {
+	z-index: 30;
+}
+
+.section-main {
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	z-index: 40 !important;
+	background-color: $background;
+}
+
+.section-main-active-left {
+	margin-left: 300px;
+}
+.section-side {
+	display: flex;
+	flex-direction: column;
+	transition: all 0.2s ease;
+	width: 300px !important;
+	position: absolute;
+	z-index: 20;
+	left: 0;
 }

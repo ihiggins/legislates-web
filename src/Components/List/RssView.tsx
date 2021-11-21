@@ -7,7 +7,6 @@ var RssView = ({ link, title, desc }: props) => {
 
 	if (error) return <div>error</div>;
 	if (loading) return <div>loading</div>;
-
 	console.log(data);
 
 	var items = [];
@@ -30,8 +29,7 @@ var RssView = ({ link, title, desc }: props) => {
 					<h1 className='rss-header'> {title}</h1>
 					<h2 className='rss-desc'>{desc}</h2>
 				</div>
-
-				{items}
+				{items.length === 0 ? <div>Nothing Today.</div> : items}
 			</div>
 		</div>
 	);
