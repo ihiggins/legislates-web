@@ -20,7 +20,7 @@ function App() {
 							<RssView
 								title='Bills Presented to the President'
 								desc="When a piece of legislation that requires the President's signature to become law passes Congress, this feed will alert you that the legislation has been submitted to the President for his or her signature."
-								link='http://localhost:3000/public/president'
+								link={`${process.env.REACT_APP_API}/public/president`}
 							/>
 						}
 					/>
@@ -30,7 +30,7 @@ function App() {
 							<RssView
 								title='On the Senate Floor Today.'
 								desc='Legislation brought to the floor of the United States Senate.'
-								link='http://localhost:3000/public/senate'
+								link={`${process.env.REACT_APP_API}/public/senate`}
 							/>
 						}
 					/>
@@ -40,7 +40,7 @@ function App() {
 							<RssView
 								title='On the House Floor Today.'
 								desc='Legislation brought to the floor of the United States House of Representatives.'
-								link='http://localhost:3000/public/house'
+								link={`${process.env.REACT_APP_API}/public/house`}
 							/>
 						}
 					/>

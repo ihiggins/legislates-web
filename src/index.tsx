@@ -1,20 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './Styles/Global.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { RecoilRoot } from 'recoil';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./Styles/Global.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { RecoilRoot } from "recoil";
+import { BrowserRouter } from "react-router-dom";
+require("dotenv").config();
 
 ReactDOM.render(
-	<React.StrictMode>
-		<RecoilRoot>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</RecoilRoot>
-	</React.StrictMode>,
-	document.getElementById('root')
+  <React.StrictMode>
+    <RecoilRoot>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </RecoilRoot>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

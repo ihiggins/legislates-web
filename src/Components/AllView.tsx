@@ -9,17 +9,17 @@ const AllView = () => {
 				</div>
 
 				<RssViewSingle
-					link='http://localhost:3000/public/president'
+					link={`${process.env.REACT_APP_API}/public/president`}
 					title='Presidents desk'
 					desc='the desc'
 				/>
 				<RssViewSingle
-					link='http://localhost:3000/public/senate'
+					link={`${process.env.REACT_APP_API}/public/senate`}
 					title='On the Senate floor.'
 					desc='the desc'
 				/>
 				<RssViewSingle
-					link='http://localhost:3000/public/house'
+					link={`${process.env.REACT_APP_API}/public/house`}
 					title='On the House floor'
 					desc='the desc'
 				/>
