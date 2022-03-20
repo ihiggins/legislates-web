@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto;
+}
+
+.search {
+  background: #303134 !important;
+  height: 45px;
+  width: 100%;
+  max-width: 720px;
+  padding: 12px;
+  border-radius: 8px !important;
+  border: 1px solid transparent;
+  position: relative;
+  font-size: 18px;
+  color: #babcbd;
+  display: flex;
+  justify-content: left;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background-color: #3c3d3f;
+  position: relative;
+  width: 40%;
+  top: 20%;
+  min-width: 400px;
+  min-height: 400px;
+  max-height: 50%;
+
+  border-radius: 8px;
+  padding: 12px;
+
+  .list {
+    overflow: scroll;
+    height: calc(100% - 75px);
+  }
+}
+.input {
+  width: 100%;
+  font-size: 18px;
+  border: none !important;
+  color: white !important;
+  border-radius: 8px !important;
+  background: #888b8f !important;
+}
+
+.icon {
+  color: white;
+}
+
+.card {
+  height: min-content;
+  width: 100%;
+  border-radius: 8px;
+  background: #2b2c2e;
+  margin-top: 12px;
+  overflow: hidden;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-family: roboto;
+    color: rgb(216, 219, 224);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .sub {
+    font-family: roboto;
+    font-size: 12px;
+    color: rgb(160, 163, 168);
+    text-overflow: ellipsis;
+    max-height: 44px;
+    height: min-content;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .time {
+    font-family: roboto;
+    font-size: 12px;
+    color: rgb(206, 208, 212);
+  }
+}

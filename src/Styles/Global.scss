@@ -1,7 +1,7 @@
 $background: #202124;
 
 $elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05),
-	0 2px 0 rgba(4, 4, 5, 0.05);
+  0 2px 0 rgba(4, 4, 5, 0.05);
 $elevation-medium: 0 4px 4px rgba(0, 0, 0, 0.16);
 $elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
 
@@ -15,237 +15,238 @@ $active: #8a9ef84d;
 $hover: #3e476e36;
 
 * {
-	padding: 0;
-	margin: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .App {
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: roboto;
-	width: 100vw;
-	min-height: 100vh;
-	height: 100%;
-	background: $background;
-	color: $text-primary;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: roboto;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background: $background;
+  color: $text-primary;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .layout {
-	display: flex;
-	box-sizing: border-box;
-	flex-grow: 1;
-	width: 100vw;
+  display: flex;
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100vw;
 }
 .nav {
-	height: 58px;
-	width: 100vw;
-	font-size: 24px;
-	box-shadow: $elevation-high;
-	display: flex;
-	color: $text-primary;
-	z-index: 100;
-	line-height: 58px;
+  height: 58px;
+  width: 100vw;
+  font-size: 24px;
+  box-shadow: $elevation-high;
+  display: flex;
+  color: $text-primary;
+  z-index: 100;
+  line-height: 58px;
+ .logo{
+  white-space: nowrap;
+  padding-right: 20px;
+}
 }
 
 .element {
-	border: 1px solid $border;
-	border-radius: $radius-primary;
-	padding: 16px;
-	width: 100%;
-	max-width: 700px;
+  border: 1px solid $border;
+  border-radius: $radius-primary;
+  padding: 16px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .element-title {
-	font-size: 1.5rem;
-	margin: 0px;
+  font-size: 1.5rem;
+  margin: 0px;
 }
 
 .element-content {
-	font-size: 1.125rem;
-	margin: 0px;
+  font-size: 1.125rem;
+  margin: 0px;
 }
 .element-link {
-	color: $text-link;
-	display: block;
+  color: $text-link;
+  display: block;
 
-	text-align: end;
+  text-align: end;
 }
 
 .rss-list {
-	max-width: 700px;
-	width: 100%;
+  max-width: 700px;
+  width: 100%;
 }
 
 .side-nav {
-	max-width: 300px;
-	width: 100%;
-	padding: 12px;
+  max-width: 300px;
+  width: 100%;
+  padding: 12px;
 }
 
 .side-nav-element {
-	color: $text-primary;
-	height: 50px;
-	width: calc(100% - 12px);
-	display: flex;
-	justify-content: start;
-	border-radius: $radius-primary;
-	align-items: center;
-	padding-left: 12px;
+  color: $text-primary;
+  height: 50px;
+  width: calc(100% - 12px);
+  display: flex;
+  justify-content: start;
+  border-radius: $radius-primary;
+  align-items: center;
+  padding-left: 12px;
 }
 .side-nav-element:hover {
-	color: $text-link;
-	background-color: $hover;
+  color: $text-link;
+  background-color: $hover;
 }
 
 .side-nav-element-text {
-	font-size: 1rem;
-	font-weight: 400;
-	margin: 0;
-	padding-left: 12px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 12px;
 }
 
-.MuiDivider-root {
-	margin: 12px 16px 12px 0px !important;
-	background-color: $border !important  ;
-}
+
 
 ::-webkit-scrollbar {
-	width: 6px;
+  width: 6px;
 }
 ::-webkit-scrollbar-corner {
-	background: $background;
+  background: $background;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: darkgrey;
-	border-radius: 8px;
+  background-color: darkgrey;
+  border-radius: 8px;
 }
 
 .rss-view {
-	display: flex;
-	width: 100%;
-	overflow-y: hidden;
-	height: calc(100vh - 57.99px);
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+  height: calc(100vh - 57.99px);
 }
 
 .rss-title {
-	max-width: 700px;
-	width: 100%;
-	text-align: start;
-	padding-top: 50px;
-	padding-bottom: 20px;
+  max-width: 700px;
+  width: 100%;
+  text-align: start;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 .rss-header {
-	font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 .rss-desc {
-	font-weight: 400 !important;
-	font-size: 1.25rem;
-	color: $text-secondary;
+  font-weight: 400 !important;
+  font-size: 1.25rem;
+  color: $text-secondary;
 }
 .rss-inner {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	overflow-x: scroll !important;
-	row-gap: 16px;
-	width: 100%;
-	padding: 16px;
-	margin: 0 auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: scroll !important;
+  row-gap: 16px;
+  width: 100%;
+  padding: 16px;
+  margin: 0 auto !important;
 }
 
 .bullet-list {
-	margin-left: 22px;
+  margin-left: 22px;
 }
 .bullet {
-	margin-top: 12px;
+  margin-top: 12px;
 }
 
 .bullet-title {
-	font-weight: 500;
-	font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 .bullet-sub {
-	color: $text-secondary;
-	font-size: 1rem;
-	font-weight: 400;
+  color: $text-secondary;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 li a {
-	position: relative;
-	left: 8px;
+  position: relative;
+  left: 8px;
 }
 
 .bullet:nth-child(1)::marker {
-	color: rgb(243, 98, 62);
+  color: rgb(243, 98, 62);
 }
 .bullet:nth-child(2)::marker {
-	color: rgb(107, 238, 243);
+  color: rgb(107, 238, 243);
 }
 .bullet:nth-child(3)::marker {
-	color: rgb(226, 200, 130);
+  color: rgb(226, 200, 130);
 }
 .bullet:nth-child(4)::marker {
-	color: rgb(119, 236, 119);
+  color: rgb(119, 236, 119);
 }
 .bullet:nth-child(5)::marker {
-	color: rgb(190, 128, 231);
+  color: rgb(190, 128, 231);
 }
 .bullet:nth-child(6)::marker {
-	color: rgb(243, 234, 113);
+  color: rgb(243, 234, 113);
 }
 .bullet:nth-child(7)::marker {
-	color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .bullet:nth-child(8)::marker {
-	color: rgb(241, 129, 129);
+  color: rgb(241, 129, 129);
 }
 .bullet:nth-child(9)::marker {
-	color: rgb(129, 237, 241);
+  color: rgb(129, 237, 241);
 }
 .bullet:nth-child(10)::marker {
-	color: rgb(138, 241, 129);
+  color: rgb(138, 241, 129);
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 a:hover {
-	text-decoration: underline;
-	text-decoration-color: $text-link;
+  text-decoration: underline;
+  text-decoration-color: $text-link;
 }
 
 .layout {
-	width: 100%;
+  width: 100%;
 }
 .lopen {
-	z-index: 30;
+  z-index: 30;
 }
 
 .section-main {
-	width: 100%;
-	transition: all 0.3s ease-in-out;
-	z-index: 40 !important;
-	background-color: $background;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 40 !important;
+  background-color: $background;
 }
 
 .section-main-active-left {
-	margin-left: 300px;
+  margin-left: 300px;
 }
 .section-side {
-	display: flex;
-	flex-direction: column;
-	transition: all 0.2s ease;
-	width: 300px !important;
-	position: absolute;
-	z-index: 20;
-	left: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  width: 300px !important;
+  position: absolute;
+  z-index: 20;
+  left: 0;
 }

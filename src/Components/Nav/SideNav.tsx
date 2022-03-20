@@ -2,9 +2,8 @@ import TodayOutlinedIcon from "@mui/icons-material/TodayOutlined";
 import GavelOutlinedIcon from "@mui/icons-material/GavelOutlined";
 import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import HearingIcon from '@mui/icons-material/Hearing';
-import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
-
+import HearingIcon from "@mui/icons-material/Hearing";
+import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 
 import { Divider } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -13,9 +12,18 @@ var SideNav = () => {
   return (
     <div className="side-nav">
       <Link to="/">
-        <SideNavElement title="Goverment Today" icon={<TodayOutlinedIcon />} />
+        <SideNavElement title="Today" icon={<TodayOutlinedIcon />} />
       </Link>
-      <Divider variant="middle" />
+
+      <Divider
+        sx={{
+          "&::before, &::after": {
+            borderColor: "#fff",
+          },
+        }}
+        variant="middle"
+      >USA</Divider>
+
       <Link to="/president">
         <SideNavElement title="President's Desk" icon={<GavelOutlinedIcon />} />
       </Link>
@@ -28,16 +36,23 @@ var SideNav = () => {
       <Link to="/senate">
         <SideNavElement title="Senate Floor" icon={<HomeOutlinedIcon />} />
       </Link>
-      <Divider variant="middle" />
-
+      <Divider
+        sx={{
+          "&::before, &::after": {
+            borderColor: "#fff",
+          },
+        }}
+        variant="middle"
+      >UK</Divider>
       <Link to="/bills">
-        <SideNavElement title="Congressional Bills" icon={<InsertDriveFileOutlinedIcon/>} />
+        <SideNavElement
+          title="Commons Bills"
+          icon={<InsertDriveFileOutlinedIcon />}
+        />
       </Link>
-
       <Link to="/hearings">
-        <SideNavElement title="Hearings" icon={<HearingIcon />} />
+        <SideNavElement title="Lords Bills" icon={<HearingIcon />} />
       </Link>
-
     </div>
   );
 };
