@@ -52,10 +52,10 @@ $hover: #3e476e36;
   color: $text-primary;
   z-index: 100;
   line-height: 58px;
- .logo{
-  white-space: nowrap;
-  padding-right: 20px;
-}
+  .logo {
+    white-space: nowrap;
+    padding-right: 20px;
+  }
 }
 
 .element {
@@ -69,11 +69,29 @@ $hover: #3e476e36;
 .element-title {
   font-size: 1.5rem;
   margin: 0px;
+  padding-bottom: 8px;
 }
 
+.element-footer{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 12px;
+}
+
+.chip{
+  color:#a3a9b2 !important;
+}
+
+.divider{
+  color:#656a72 !important;
+border-top: 1px solid #64686d !important;
+
+}
 .element-content {
   font-size: 1.125rem;
   margin: 0px;
+  padding-top: 8px;
 }
 .element-link {
   color: $text-link;
@@ -115,8 +133,6 @@ $hover: #3e476e36;
   padding-left: 12px;
 }
 
-
-
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -151,6 +167,10 @@ $hover: #3e476e36;
   font-size: 1.25rem;
   color: $text-secondary;
 }
+
+.rss-elem{
+  width: 100%;
+}
 .rss-inner {
   display: flex;
   flex-direction: column;
@@ -158,8 +178,10 @@ $hover: #3e476e36;
   overflow-x: scroll !important;
   row-gap: 16px;
   width: 100%;
+  max-width: 700px;
   padding: 16px;
   margin: 0 auto !important;
+  text-align: left;
 }
 
 .bullet-list {
@@ -249,4 +271,12 @@ a:hover {
   position: absolute;
   z-index: 20;
   left: 0;
+}
+
+.time-series {
+  background: #161719;
+  border-radius: 12px;
+  width: 100%;
+  height: 220px;
+  max-width: 700px;
 }
