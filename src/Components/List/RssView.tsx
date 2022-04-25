@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Timeline } from "react-twitter-widgets";
 import { useFetch } from "../../Hooks/useRss";
+import TimeSeries from "../TimeSeries/TimeSeries";
 import Element from "./Element";
 var RssView = ({ link, title, desc }: props) => {
   const [error, loading, data] = useFetch(link);
@@ -42,13 +44,47 @@ var RssView = ({ link, title, desc }: props) => {
           {" "}
           <h3 className="sub-header">Feed Activity</h3>
         </div>
-        <div className="time-series"></div>
+        <TimeSeries />
+
         <div className="rss-elem">
           {" "}
           <h3 className="sub-header">New On the Feed Today</h3>
         </div>
+
         {items.length === 0 ? <div>Nothing Today.</div> : items}
+
+        {window.innerWidth < 1000 && (
+          <div className="rss-elem">
+            {" "}
+            <h3 className="sub-header">Twitter</h3>
+            <div className="rss-twitter">
+              <Timeline
+                dataSource={{ sourceType: "profile", screenName: "POTUS" }}
+                options={{
+                  chrome: "noheader, nofooter",
+                  theme: "dark",
+                  width: "700",
+                  height: "600",
+                }}
+              />
+            </div>
+          </div>
+        )}
       </div>
+
+      {window.innerWidth > 1000 && (
+      <div className="rss-twitter">
+        <Timeline
+          dataSource={{ sourceType: "profile", screenName: "POTUS" }}
+          options={{
+            chrome: "noheader, nofooter",
+            theme: "dark",
+            background: "#161719",
+            width: "500",
+            height: "600",
+          }}
+        />
+      </div> )}
     </div>
   );
 };

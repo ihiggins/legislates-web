@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  background: #161719;
+  border-radius: 8px;
+  padding: 12px;
+  height: 140px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: roboto;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.grid {
+  display: flex;
+  gap: 4px !important;
+  row-gap: 4px !important;
+  .column {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+.square {
+  width: 16%;
+  aspect-ratio: 1 / 1;
+  border-radius: 2px;
+  background: gray;
+}
+
+.days {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px !important;
+  row-gap: 4px !important;
+  flex-basis: auto;
+  width: 100%;
+}
