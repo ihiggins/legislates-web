@@ -4,12 +4,14 @@ import { useFetch } from "../../Hooks/useRss";
 import TimeSeries from "../TimeSeries/TimeSeries";
 import Element from "./Element";
 var RssView = ({ link, title, desc }: props) => {
+  console.log("LINK",link)
   const [error, loading, data] = useFetch(link);
 
+  console.log(data)
   // if (error) return <div>error</div>;
   // if (loading) return <div>loading</div>;
 
-  const rss:any = link.split("/")[4];
+  const rss:any = link.split("/")[3];
 
   let twitters:any = {
     lords: "UKHouseofLords",

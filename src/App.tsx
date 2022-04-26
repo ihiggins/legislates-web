@@ -21,7 +21,7 @@ function App() {
               <RssView
                 title="Bills Presented to the President"
                 desc="When a piece of legislation that requires the President's signature to become law passes Congress, this feed will alert you that the legislation has been submitted to the President for his or her signature."
-                link={`${process.env.REACT_APP_API}/public/president`}
+                link={`${process.env.REACT_APP_API}/president`}
               />
             }
           />
@@ -31,7 +31,7 @@ function App() {
               <RssView
                 title="On the Senate Floor Today."
                 desc="Legislation brought to the floor of the United States Senate."
-                link={`${process.env.REACT_APP_API}/public/senate`}
+                link={`${process.env.REACT_APP_API}/senate`}
               />
             }
           />
@@ -41,7 +41,7 @@ function App() {
               <RssView
                 title="On the House Floor Today."
                 desc="Legislation brought to the floor of the United States House of Representatives."
-                link={`${process.env.REACT_APP_API}/public/house`}
+                link={`${process.env.REACT_APP_API}/house`}
               />
             }
           />
@@ -51,7 +51,7 @@ function App() {
               <RssView
                 title="The House of Commons Bills"
                 desc="A list of up of most recent public bills for the current session of The House of Commons"
-                link={`${process.env.REACT_APP_API}/public/commons`}
+                link={`${process.env.REACT_APP_API}/commons`}
               />
             }
           />
@@ -61,7 +61,7 @@ function App() {
               <RssView
                 title="The House of Lords Bills"
                 desc="The House of Lords, formally The Right Honourable the Lords Spiritual and Temporal of the United Kingdom of Great Britain and Northern Ireland in Parliament assembled, also known as the House of Peers, is the upper house of the Parliament of the United Kingdom."
-                link={`${process.env.REACT_APP_API}/public/lords`}
+                link={`${process.env.REACT_APP_API}/lords`}
               />
             }
           />
