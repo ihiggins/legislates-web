@@ -9,7 +9,17 @@ var RssView = ({ link, title, desc }: props) => {
   // if (error) return <div>error</div>;
   // if (loading) return <div>loading</div>;
 
-  let tempData: any = [
+  const rss:any = link.split("/")[4];
+
+  let twitters:any = {
+    lords: "UKHouseofLords",
+    senate: "SenateFloor",
+    president: "POTUS",
+    commons: "HouseofCommons",
+    house: "housefloor",
+  };
+
+  let usp = [
     {
       key: "1",
       title:
@@ -20,7 +30,31 @@ var RssView = ({ link, title, desc }: props) => {
     },
   ];
 
+  let ukc = [
+    {
+      key: "1",
+      title: "Police, Crime, Sentencing and Courts Bill",
+      content:
+        "A Bill to make provision about the police and other emergency workers; to make provision about collaboration between authorities to prevent and reduce serious violence; to make provision about offensive weapons homicide reviews; to make provision for new offences and for the modification of existing offences; to make provision about the powers of the police and other authorities for the purposes of preventing, detecting, investigating or prosecuting crime or investigating other matters; to make provision about the maintenance of public order; to make provision about the removal, storage and disposal of vehicles; to make provision in connection with driving offences; to make provision about cautions; to make provision about bail and remand; to make provision about sentencing, detention, release, management and rehabilitation of offenders; to make provision about secure 16 to 19 Academies; to make provision for and in connection with procedures before courts and tribunals; and for connected purposes.",
+      link: "https://bills.parliament.uk/bills/2839",
+    },
+    {
+      key: "1",
+      title: "Judicial Review and Courts Bill",
+      content:
+        "A Bill to Make provision about the provision that may be made by, and the effects of, quashing orders; to make provision restricting judicial review of certain decisions of the Upper Tribunal; to make provision about the use of written and electronic procedures in courts and tribunals; to make other provision about procedure in, and the organisation of, courts and tribunals; and for connected purposes.",
+      link: "https://www.govinfo.gov/content/pkg/BILLS-117hr4476rfs/html/BILLS-117hr4476rfs.htm",
+    },
+  ];
+
+  var tempData: any = usp;
   var items = [];
+
+  console.log(link.split("/")[4]);
+
+  if (link === "president") tempData = usp;
+  if (link === "commons") tempData = ukc;
+
   for (var i in tempData) {
     items.push(
       <Element
@@ -59,7 +93,10 @@ var RssView = ({ link, title, desc }: props) => {
             <h3 className="sub-header">Twitter</h3>
             <div className="rss-twitter">
               <Timeline
-                dataSource={{ sourceType: "profile", screenName: "POTUS" }}
+                dataSource={{
+                  sourceType: "profile",
+                  screenName: twitters[rss],
+                }}
                 options={{
                   chrome: "noheader, nofooter",
                   theme: "dark",
@@ -73,18 +110,19 @@ var RssView = ({ link, title, desc }: props) => {
       </div>
 
       {window.innerWidth > 1000 && (
-      <div className="rss-twitter">
-        <Timeline
-          dataSource={{ sourceType: "profile", screenName: "POTUS" }}
-          options={{
-            chrome: "noheader, nofooter",
-            theme: "dark",
-            background: "#161719",
-            width: "500",
-            height: "600",
-          }}
-        />
-      </div> )}
+        <div className="rss-twitter">
+          <Timeline
+            dataSource={{ sourceType: "profile", screenName: twitters[rss]}}
+            options={{
+              chrome: "noheader, nofooter",
+              theme: "dark",
+              background: "#161719",
+              width: "500",
+              height: "600",
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

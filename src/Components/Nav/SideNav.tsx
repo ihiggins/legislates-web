@@ -44,13 +44,13 @@ var SideNav = () => {
         }}
         variant="middle"
       >UK</Divider>
-      <Link to="/bills">
+      <Link to="/commons">
         <SideNavElement
           title="Commons Bills"
           icon={<InsertDriveFileOutlinedIcon />}
         />
       </Link>
-      <Link to="/hearings">
+      <Link to="/lords">
         <SideNavElement title="Lords Bills" icon={<HearingIcon />} />
       </Link>
     </div>

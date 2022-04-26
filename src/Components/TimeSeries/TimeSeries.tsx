@@ -26,7 +26,6 @@ const TimeSeries = () => {
       rows.push(<div className={styles.square} style={{background:colors[getRandomInt(4)]}}></div>);
     }
 
-    console.log(i);
     gridData.push(
       <div className={styles.column}>
         <div className={styles.title}> {months[i].name.substring(0, 3)}</div>

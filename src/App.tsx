@@ -46,22 +46,22 @@ function App() {
             }
           />
           <Route
-            path="/bills"
+            path="/commons"
             element={
               <RssView
-                title="Congressional Bills."
-                desc="Provides access to newly published govinfo content from the Congressional Bills- Enrolled. Congressional bills are legislative proposals from the House of Representatives and Senate within the United States Congress."
-                link="https://www.govinfo.gov/rss/bills-enr.xml"
+                title="The House of Commons Bills"
+                desc="A list of up of most recent public bills for the current session of The House of Commons"
+                link={`${process.env.REACT_APP_API}/public/commons`}
               />
             }
           />
           <Route
-            path="/hearings"
+            path="/lords"
             element={
               <RssView
-                title="Congressional Hearings - New items on govinfo"
-                desc="Provides access to newly published govinfo content from the Congressional Hearings. A hearing is a meeting or session of a Senate, House, joint, or special committee of Congress, usually open to the public, to obtain information and opinions on proposed legislation, conduct an investigation, or evaluate/oversee the activities of a government department or the implementation of a Federal law."
-                link="https://www.govinfo.gov/rss/chrg.xml"
+                title="The House of Lords Bills"
+                desc="The House of Lords, formally The Right Honourable the Lords Spiritual and Temporal of the United Kingdom of Great Britain and Northern Ireland in Parliament assembled, also known as the House of Peers, is the upper house of the Parliament of the United Kingdom."
+                link={`${process.env.REACT_APP_API}/public/lords`}
               />
             }
           />
