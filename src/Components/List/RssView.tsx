@@ -52,10 +52,10 @@ var RssView = ({ link, title, desc }: props) => {
   var tempData: any = usp;
   var items = [];
 
-  console.log(link.split("/")[4]);
 
-  if (link === "president") tempData = usp;
-  if (link === "commons") tempData = ukc;
+
+  if (rss === "president") tempData = usp;
+  if (rss === "commons") tempData = ukc;
 
   for (var i in tempData) {
     items.push(

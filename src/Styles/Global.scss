@@ -148,6 +148,7 @@ border-top: 1px solid #64686d !important;
   display: flex;
   width: 100%;
   height: calc(100vh - 57.99px);
+  overflow-y: scroll;
 }
 
 .rss-title {
