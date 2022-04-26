@@ -4,16 +4,16 @@ import { useFetch } from "../../Hooks/useRss";
 import TimeSeries from "../TimeSeries/TimeSeries";
 import Element from "./Element";
 var RssView = ({ link, title, desc }: props) => {
-  console.log("LINK",link)
+  console.log("LINK", link);
   const [error, loading, data] = useFetch(link);
 
-  console.log(data)
+  console.log(data);
   // if (error) return <div>error</div>;
   // if (loading) return <div>loading</div>;
 
-  const rss:any = link.split("/")[3];
+  const rss: any = link.split("/")[3];
 
-  let twitters:any = {
+  let twitters: any = {
     lords: "UKHouseofLords",
     senate: "SenateFloor",
     president: "POTUS",
@@ -21,14 +21,49 @@ var RssView = ({ link, title, desc }: props) => {
     house: "housefloor",
   };
 
-  let usp = [
+  let usp: any = [];
+
+  let ush = [
     {
       key: "1",
       title:
-        "H.R.4476(RFS) - DHS Trade and Economic Security Council Act of 2021",
+        "Brown v. Board of Education National Historic Site Expansion Act (04/26/2022 legislative day)",
       content:
-        "H.R. 4476 established in the Department of Homeland Security (DHS) Trade andEconomic Security Council . Council will provide to the Secretary advice and recommendations on matters of trade and economic security .",
-      link: "https://www.govinfo.gov/content/pkg/BILLS-117hr4476rfs/html/BILLS-117hr4476rfs.htm",
+        "The Brown v. Board of Education National Historic Site established by section 103(a) of Public Law 102-525 (106 Stat3439) shall be known and designated as the ``Brown v.Board of henyEducation National Historical Park'' The Brown case was joined by 4 other cases relating to school segregation pending before the Supreme Court .",
+      link: "https://www.congress.gov/117/bills/s270/BILLS-117s270es.htm",
+    },
+    {
+      key: "2",
+      title:
+        "Small Business Advocacy Improvements Act of 2022 (04/26/2022 legislative day)",
+      content:
+        "H R. R. 6454 is reported in House (RHlt; DOC&gt) The bill would clarify the primary functions and duties of the Office of Advocacy of the Small Business Administration .",
+      link: "https://www.congress.gov/117/bills/hr6454/BILLS-117hr6454rh.htm",
+    },
+
+    {
+      key: "3",
+      title:
+        "One Stop Shop for Small Business Compliance Act of 2021 (04/26/2022 legislative day)",
+      content:
+        "The Small Business Act may be cited as the ``One Stop Shop for Small Business  Compliance Act of 2021 . The Ombudsman shall maintain a publicly available website that includes hyperlinks to small entity compliance guides described under section 212 of the Small BusinessRegulatory Enforcement Fairness Act of 1996 .",
+      link: "https://www.congress.gov/117/bills/hr4877/BILLS-117hr4877rh.htm",
+    },
+
+    {
+      key: "4",
+      title:
+        "SCORE for Small Business Act of 2022 (04/26/2022 legislative day)",
+      content:
+        " H.R. 6450 Reported in House (RHlt; DOC&gt Union Calendar No. 187) H. R. 64 50: To amend Small Business Act to reauthorize the SCORE program .",
+      link: "https://www.congress.gov/117/bills/hr6450/BILLS-117hr6450rh.htm",
+    },
+    {
+      key: "5",
+      title:
+        "Women’s Business Centers Improvement Act of 2022 (04/26/2022 legislative day)",
+      content: ` H.R. 6441 Reported in House (RHlt;DOC&gtUnion Calendar No. 188) H. R. 6442: To amend the Small Business Act to improve the women's business centerprogram, and for other purposes . The bill is passed by the House and House of Representatives of the U.S. in Congress assembled . H R 6441: "Women's Business Centers Improvement  (A) for the benefit of small business concernsowned and controlled by women" The bill was passed by a House and the Senate of Representatives on January 20, 2022 .`,
+      link: "https://www.congress.gov/117/bills/hr6441/BILLS-117hr6441rh.xml",
     },
   ];
 
@@ -49,13 +84,30 @@ var RssView = ({ link, title, desc }: props) => {
     },
   ];
 
+  let ukl = [
+    {
+      key: "1",
+      title: "Monken Hadley Common Bill",
+      content:
+        "A Bill to transfer the ownership and management of Monken Hadley Common to Monken Hadley Common Trust and for related purposes.",
+      link: "https://bills.parliament.uk/bills/2519",
+    },
+    {
+      key: "2",
+      title: "Highgate Cemetery Act",
+      content:
+        "A Bill to confer powers upon the Friends of Highgate Cemetery Trust to operate, maintain and improve Highgate Cemetery and to extinguish rights of burial and disturb human remains in Highgate Cemetery for the purpose of increasing the space for interments and the improvement of Highgate Cemetery; and for connected purposes.",
+      link: "https://bills.parliament.uk/bills/2518",
+    },
+  ];
+
   var tempData: any = usp;
   var items = [];
 
-
-
   if (rss === "president") tempData = usp;
   if (rss === "commons") tempData = ukc;
+  if (rss === "house") tempData = ush;
+  if (rss === "lords") tempData = ukl;
 
   for (var i in tempData) {
     items.push(
@@ -114,7 +166,7 @@ var RssView = ({ link, title, desc }: props) => {
       {window.innerWidth > 1000 && (
         <div className="rss-twitter">
           <Timeline
-            dataSource={{ sourceType: "profile", screenName: twitters[rss]}}
+            dataSource={{ sourceType: "profile", screenName: twitters[rss] }}
             options={{
               chrome: "noheader, nofooter",
               theme: "dark",

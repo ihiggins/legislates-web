@@ -15,7 +15,7 @@ const TimeSeries = () => {
     { name: "november", days: 30 },
     { name: "december", days: 31 },
   ];
-  const colors = ["#2c3138", "#0e4429", "#006d32", "#30a14e","#39d353"];
+  const colors = ["#2c3138", "#0e4429", "#006d32", "#30a14e", "#39d353"];
 
   let gridData = [];
 
@@ -23,7 +23,13 @@ const TimeSeries = () => {
     let rows = [];
 
     for (var j = 0; j <= months[i].days; j++) {
-      rows.push(<div className={styles.square} key={j} style={{background:colors[getRandomInt(4)]}}></div>);
+      rows.push(
+        <div
+          className={styles.square}
+          key={j}
+          style={{ background: colors[getRandomInt(4)] }}
+        ></div>
+      );
     }
 
     gridData.push(
