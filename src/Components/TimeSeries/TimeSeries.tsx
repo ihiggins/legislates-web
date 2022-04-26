@@ -23,11 +23,11 @@ const TimeSeries = () => {
     let rows = [];
 
     for (var j = 0; j <= months[i].days; j++) {
-      rows.push(<div className={styles.square} style={{background:colors[getRandomInt(4)]}}></div>);
+      rows.push(<div className={styles.square} key={j} style={{background:colors[getRandomInt(4)]}}></div>);
     }
 
     gridData.push(
-      <div className={styles.column}>
+      <div className={styles.column} key={i}>
         <div className={styles.title}> {months[i].name.substring(0, 3)}</div>
         <div className={styles.days}>{rows}</div>
       </div>

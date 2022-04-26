@@ -1,6 +1,5 @@
 {
   "name": "legislates-web",
-  "homepage": "https://ihiggins.github.io/legislates-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
