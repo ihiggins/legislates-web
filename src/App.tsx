@@ -11,10 +11,8 @@ function App() {
       <Nav></Nav>
       <Layout>
         <SideNav />
-
         <Routes>
           <Route path="/" element={<AllView />} />
-
           <Route
             path="/president"
             element={
