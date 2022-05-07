@@ -21,14 +21,11 @@ function useFetch(link: string) {
 			});
 	}, [link]);
 
-	return [error, loading, data] as const;
+	return [error, loading, data] as any	;
 }
 
 export { useFetch };
 
-// interface Idata {
-
-// }
 
 type rss = {
 	content: string;
