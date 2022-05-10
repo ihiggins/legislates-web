@@ -4,7 +4,7 @@ import Modal from "@mui/material/Modal";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./Styles.module.scss";
 import { InputAdornment, OutlinedInput } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Divider from "@mui/material/Divider";
 
 import { useQuery } from "../../Hooks/useQuery";
@@ -51,7 +51,24 @@ export default function Search() {
 }
 
 function Items(props) {
-  const { data } = useQuery(`search/${props.data}`);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: props.data }),
+    };
+    (async () => {
+      let temp = await fetch(
+        `${process.env.REACT_APP_API}/typeahead`,
+        requestOptions
+      );
+      temp = await temp.json();
+      setData(temp);
+    })();
+  }, [props.data]);
+
   console.log("data", data);
   var comComponents = [];
   if (data.length > 0) {
@@ -64,10 +81,10 @@ function Items(props) {
 }
 
 function Preview(props) {
-  // let navigate = useHistory();
+  console.log(props);
   var handleClick = (event) => {
+    window.open(props.data.link, "_blank").focus();
     event.stopPropagation();
-    // navigate.push("/community/" + props.data.id);
   };
   return (
     <div className={styles.card} onMouseDown={handleClick}>
