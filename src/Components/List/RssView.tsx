@@ -7,8 +7,8 @@ var RssView = ({ link, title, desc }: props) => {
   // console.log("LINK", link);
   const rss: any = link.split("/")[3];
 
-  const [error, loading, data] = useFetch(`rss/${rss}`);
-
+  const [error, loading, data] = useFetch(`${process.env.REACT_APP_API}/rss/${rss}`);
+  console.log('DATA',data)
   // if (error) return <div>error</div>;
   // if (loading) return <div>loading</div>;
 
